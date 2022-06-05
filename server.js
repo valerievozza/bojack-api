@@ -64,6 +64,7 @@ const episodes = {}
 
 const soundtrack = {}
 
+app.use(cors())
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
