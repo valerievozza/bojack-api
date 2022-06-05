@@ -1,5 +1,5 @@
-const { request } = require('express')
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const PORT = 8000
 
@@ -60,9 +60,21 @@ const characters = {
     }
 }
 
+const episodes = {}
+
+const soundtrack = {}
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
+
+// Characters JSON Object
+
+app.get('/api/characters',(req,res) => {
+    res.json(characters)
+})
+
+// Search by Character
 
 app.get('/api/:name',(req,res) => {
     const characterName = req.params.name.toLowerCase()
