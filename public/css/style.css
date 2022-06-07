@@ -11,18 +11,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1, p {
-    margin-left: 40px;
-}
-
-.property {
-    font-weight: bold;
-}
-
-.properties, .source {
-    list-style-type: none;
-}
-
-.source li {
+li {
     display: inline;
+}
+
+#prop-table, #prop-table th, #prop-table td {
+    border: 1px solid black;
+}
+
+.prop {
+    font-weight: bold;
 }
