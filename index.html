@@ -6,95 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bojack Horseman API</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>BoJack Horseman API</h1>
-    <p>Unofficial API for the animated Netflix series BoJack Horseman.</p>
-    <p><a href ="https://github.com/valerievozza/bojack-api">GitHub Repo</a></p>
-    <p>For a JSON object of all chracters: <a href="https://bojack-api.herokuapp.com/api/characters">https://bojack-api.herokuapp.com/api/characters</a></p>
-    <p>To search for a chracter by name: https://bojack-api.herokuapp.com/api/<strong>Character Name</strong></p>
-    <p>Each character object contains the following properties:</p>
-    <table id="prop-table">
-        <thead>
-            <th>Property</th>
-            <th>Description</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>name</td>
-                <td>Full name of character [string]</td>
-            </tr>
-            <tr>
-                <td>birthDate</td>
-                <td>Birthdate of character [string]</td>
-            </tr>
-            <tr>
-                <td>birthPlace</td>
-                <td>Birth place of character [string]</td>
-            </tr>
-            <tr>
-                <td>species</td>
-                <td>Species of character [string]</td>
-            </tr>
-            <tr>
-                <td>voiceActor</td>
-                <td>Voice actor of character [string]</td>
-            </tr>
-            <tr>
-                <td>image</td>
-                <td>URL to image of character [string]</td>
-            </tr>
-            <tr>
-                <td>quote</td>
-                <td>Quote from character [string]</td>
-            </tr>
-        </tbody>
-    </table>
-    
-    <!-- <h2>Sample Code</h2>
-    <span><a href="https://bojack-api.herokuapp.com/api/">https://bojack-api.herokuapp.com/api/</a></span>
-    <input type="text" placeholder="Princess Carolyn" name="name">
-    <button id="search">Search</button>
-
-    <table id="sample-table">
-        <tbody>
-            <tr>
-                <td class="prop">name</td>
-                <td id="name-string"></td>
-            </tr>
-            <tr>
-                <td class="prop">birthDate</td>
-                <td id="birthdate-string"></td>
-            </tr>
-            <tr>
-                <td class="prop">birthPlace</td>
-                <td id="birthplace-string"></td>
-            </tr>
-            <tr>
-                <td class="prop">species</td>
-                <td id="species-string"></td>
-            </tr>
-            <tr>
-                <td class="prop">voiceActor</td>
-                <td id="actor-string"></td>
-            </tr>
-            <tr>
-                <td class="prop">image</td>
-                <td id="image-string"></td>
-            </tr>
-            <tr>
-                <td class="prop">quote</td>
-                <td id="quote-string"></td>
-            </tr>
-        </tbody>
-    </table> -->
-    <ul class="source">
+    <header>
+        <div class="logo">
+            <img src="images/BoJackLogo.png" alt="Bojack Horseman Logo">
+        </div>
+        <div class="title">
+            <h1>BoJack Horseman API</h1>
+            <p>Unofficial API for the animated Netflix series BoJack Horseman.</p>
+        </div>
+        <a class="github__repo" href="https://github.com/valerievozza/bojack-api">GitHub Repo</a>
+    </header>
+    <div class="info">
+            <div class="documentation">
+                <h3>Endpoint</h3>
+                <div class="code__view">
+                    <span>get</span>
+                    <a href="https://bojack-api.herokuapp.com/api">https://bojack-api.herokuapp.com/api</a>
+                </div>
+                <h3>Search By</h3>
+                <div class="code__view column">
+                    <span>all characters</span>
+                    <a href="https://bojack-api.herokuapp.com/api/characters">https://bojack-api.herokuapp.com/api/characters</a>
+                </div>
+                <div class="code__view column">
+                    <span>search by id</span>
+                    <a href="#">https://bojack-api.herokuapp.com/api/characters/Character Id</a>
+                </div>
+                <div class="code__view column">
+                    <span>search by name</span>
+                    <a href="#">https://bojack-api.herokuapp.com/api/characters/name/Character Name</a>
+                </div>
+            </div>
+            <div class="features">
+                <h3>Features</h3>
+            <table id="prop-table">
+                <thead>
+                    <th class="border1">Property</th>
+                    <th class="border2">Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>id</td>
+                        <td>Id number of character [Number]</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>Full name of character [string]</td>
+                    </tr>
+                    <tr>
+                        <td>birthDate</td>
+                        <td>Birthdate of character [string]</td>
+                    </tr>
+                    <tr>
+                        <td>birthPlace</td>
+                        <td>Birth place of character [string]</td>
+                    </tr>
+                    <tr>
+                        <td>species</td>
+                        <td>Species of character [string]</td>
+                    </tr>
+                    <tr>
+                        <td>voiceActor</td>
+                        <td>Voice actor of character [string]</td>
+                    </tr>
+                    <tr>
+                        <td>image</td>
+                        <td>URL to image of character [string]</td>
+                    </tr>
+                    <tr>
+                        <td class="border3">quote</td>
+                        <td class=border4>Quote from character [string]</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            
+            <div class="disclaimer">
+                <h3>Disclaimer</h3>
+            <strong>
+                This API and its data are for practical purposes only.
+            </strong>
+            <p>
+                The BoJack Horseman API was created by Valerie Vozza. Character data was collected from <a href="https://bojackhorseman.fandom.com/wiki/BoJack_Horseman_Wiki">The BoJack Horseman Wiki</a> and is used without claim of ownership and belong to their respective owners.
+            </p>
+            </div>
+    </div>
+    <footer>
+        <div class="owner">
+            <ul class="source">
         <li>Valerie Vozza</li>
         <li><a href="">Portfolio</a></li>
         <li><a href="">LinkedIn</a></li>
         <li><a href="">GitHub</a></li>
         <li><a href="">Data Source</a></li>
+        <li><a href="https://github.com/valerievozza/bojack-api/graphs/contributors">See contributors</a></li>
     </ul>
-    <!-- <script type="text/javascript" src="public/main.js"></script> -->
+        </div>
+    </footer>
 </body>
 </html>
